@@ -10,14 +10,11 @@ import ShazamKit
 
 class ShazamController: NSObject, ObservableObject {
     
+    // MARK: - PUBLISHED VARIABLES
     @Published var media : [SHMatchedMediaItem] = SHMatchedMediaItem.data
     @Published var buttonTitle = "Listen"
     @Published var state: ShazamState = .idle
-    private let audioEngine = AVAudioEngine()
-    private let signatureGenerator = SHSignatureGenerator()
-    private let session = SHSession()
-    private let audioSession = AVAudioSession.sharedInstance()
-
+    @Published var searchResults: [SHMatchedMediaItem] = SHMatchedMediaItem.data
     
     @Published var searchText: String = "" {
         didSet {
@@ -29,8 +26,13 @@ class ShazamController: NSObject, ObservableObject {
         }
     }
     
-    @Published var searchResults: [SHMatchedMediaItem] = SHMatchedMediaItem.data
+    // MARK: - PRIVATE VARIABLES
+    private let audioEngine = AVAudioEngine()
+    private let signatureGenerator = SHSignatureGenerator()
+    private let session = SHSession()
+    private let audioSession = AVAudioSession.sharedInstance()
     
+    // MARK: - INITIALIZE
     override init() {
         super.init()
         initialSetup()
@@ -39,6 +41,8 @@ class ShazamController: NSObject, ObservableObject {
     func initialSetup() {
         self.session.delegate = self
         self.audioSession.requestRecordPermission { _ in }
+        self.searchResults = SHMatchedMediaItem.data
+        self.media = SHMatchedMediaItem.data
     }
     
     func delete(_ song: SHMatchedMediaItem) {
@@ -47,29 +51,28 @@ class ShazamController: NSObject, ObservableObject {
     }
     
     func star(_ song: SHMatchedMediaItem){
-        
+        //TODO
     }
     
 }
 
+// MARK: - SHSession Delegate
 extension ShazamController: SHSessionDelegate {
     
     func listen() {
+        /// SETUP
         try! audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         let inputNode = self.audioEngine.inputNode
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         
+        /// PREPARE
         inputNode.removeTap(onBus: 0)
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
             try! self.signatureGenerator.append(buffer, at: nil)
             self.session.matchStreamingBuffer(buffer, at: nil)
-            
-            DispatchQueue.main.async {
-                self.searchResults = SHMatchedMediaItem.data
-                self.media = SHMatchedMediaItem.data
-            }
         }
         
+        /// START
         self.audioEngine.prepare()
         try! self.audioEngine.start()
         self.buttonTitle = "Listening"
@@ -77,19 +80,21 @@ extension ShazamController: SHSessionDelegate {
     
     func session(_ session: SHSession, didFind match: SHMatch) {
         guard let song = match.mediaItems.first else { return }
-        print("SONG FOUND: \(song.title ?? "NO TITLE")")
+        print("SONG FOUND: \(song.title ?? "NO TITLE")") /// PRINT SUCCESS
         self.audioEngine.stop()
         DispatchQueue.main.async {
         self.buttonTitle = "Listen"
             self.media.append(song)
+            self.searchResults.append(song)
         }
     }
     
     func session(_ session: SHSession, didNotFindMatchFor signature: SHSignature, error: Error?) {
-        print("SESSION DID NOT MATCH: \(error?.localizedDescription ?? "ERROR")")
+        print("SESSION DID NOT MATCH: \(error?.localizedDescription ?? "ERROR")") /// PRINT ERROR
     }
 }
 
+// MARK: - SAMPLE DATA
 extension SHMatchedMediaItem {
     static let data = [SHMatchedMediaItem(properties: [.title:"good 4 u",.artist:"Olivia Rodrigo",.artworkURL:URL(string: "https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/33/fd/32/33fd32b1-0e43-9b4a-8ed6-19643f23544e/21UMGIM26092.rgb.jpg/400x400cc.jpg")]),
                        SHMatchedMediaItem(properties: [.title:"Talking To The Moon",.artist:"Bruno Mars",.artworkURL:URL(string: "https://is5-ssl.mzstatic.com/image/thumb/Music115/v4/25/6d/95/256d95ea-c58c-074d-b6f1-18f5cb4e6b96/075679956293.jpg/400x400cc.jpg")]),

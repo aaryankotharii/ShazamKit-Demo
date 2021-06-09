@@ -69,6 +69,7 @@
 		4E13A45E2670E39100B582C4 /* ShazamKit-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4E13A46F2670E68000B582C4 /* ShazamKit-Demo.entitlements */,
 				4EE468DB26712C9300A57841 /* App */,
 				4EE468DC26712C9800A57841 /* Model */,
 				4EE468DD26712CAA00A57841 /* ViewModel */,
@@ -101,7 +102,6 @@
 			children = (
 				4E13A45F2670E39100B582C4 /* ShazamKit_DemoApp.swift */,
 				4E13A4612670E39100B582C4 /* HomeView.swift */,
-				4E13A46F2670E68000B582C4 /* ShazamKit-Demo.entitlements */,
 				4EE468DF26712CD000A57841 /* ShazamDetail.swift */,
 			);
 			path = App;

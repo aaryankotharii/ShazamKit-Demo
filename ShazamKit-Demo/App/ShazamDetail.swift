@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ShazamDetail: View {
+    // MARK: PROPERTIES
     let media: SHMedia
+    
+    // MARK: BODY
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
             AsyncImage(url: media.image) { image in
@@ -18,7 +21,7 @@ struct ShazamDetail: View {
                     .blur(radius: 10)
             } placeholder: {
                 Color.black
-            }
+            } // ASYNC IMAGE
         VStack {
             AsyncImage(url: media.image) { image in
                 image
@@ -28,7 +31,7 @@ struct ShazamDetail: View {
                     .shadow(radius: 10)
             } placeholder: {
                 Color.black
-            }
+            } // ASYNC IMAGE
             
             Text(media.name)
                 .foregroundColor(.white)
@@ -43,15 +46,16 @@ struct ShazamDetail: View {
                     .padding()
                     .background(.pink)
                     .cornerRadius(6)
-            }
+            } // LINK
             .padding(50)
-        }
-        }
+        } // VSTACK
+        } // ZSTACK
         .frame(width: UIScreen.main.bounds.width)
         .edgesIgnoringSafeArea(.all)
     }
 }
 
+// MARK: PREVIEW
 struct ShazamDetail_Previews: PreviewProvider {
     static var previews: some View {
         ShazamDetail(media: SHMedia.data)

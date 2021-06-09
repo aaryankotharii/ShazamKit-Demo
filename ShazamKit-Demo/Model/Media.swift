@@ -29,5 +29,6 @@ struct SHMedia {
         self.mediaUrl = URL(string: "https://www.apple.com/in/apple-music/")!
     }
     
+    // SAMPLE DATA
     static let data = SHMedia(name: "Astronaut In The Ocean", artist: "Masked Wolf", image: URL(string: "https://is2-ssl.mzstatic.com/image/thumb/Music115/v4/83/eb/59/83eb59d9-629d-5f60-7a6b-a2cb0b70ebd1/075679793102.jpg/400x400cc.jpg"))
 }

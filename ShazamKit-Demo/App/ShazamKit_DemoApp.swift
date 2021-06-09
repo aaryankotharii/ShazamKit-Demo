@@ -11,7 +11,7 @@ import SwiftUI
 struct ShazamKit_DemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+        ContentView(session: ShazamController())
         }
     }
 }

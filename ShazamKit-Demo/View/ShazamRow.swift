@@ -16,11 +16,12 @@ struct ShazamRow: View {
                     .frame(width: 100, height: 100)
                     .clipShape(RoundedRectangle(cornerRadius: 7))
             } placeholder: {
-                Color.green
+                Color.secondary
+                    .frame(width: 100, height: 100)
             }
             VStack(alignment:.leading,spacing:10) {
                 Text(media.name ?? "No Title")
-                    .font(.title2)
+                    .font(.title3)
                     .bold()
                 Text(media.artist ?? "")
                     .font(.callout)

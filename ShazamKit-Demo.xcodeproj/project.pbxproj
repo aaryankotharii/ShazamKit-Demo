@@ -15,6 +15,7 @@
 		4E13A4722670E68000B582C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E13A4712670E68000B582C4 /* AudioToolbox.framework */; };
 		4E4C400926711AA9002D5B20 /* ShazamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C400826711AA9002D5B20 /* ShazamRow.swift */; };
 		4E4C400B26711B86002D5B20 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C400A26711B86002D5B20 /* Media.swift */; };
+		4EE468E026712CD000A57841 /* ShazamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE468DF26712CD000A57841 /* ShazamDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4E1A9FFA2670F5C400C02F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4E4C400826711AA9002D5B20 /* ShazamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamRow.swift; sourceTree = "<group>"; };
 		4E4C400A26711B86002D5B20 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		4EE468DF26712CD000A57841 /* ShazamDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,15 +65,14 @@
 		4E13A45E2670E39100B582C4 /* ShazamKit-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4EE468DB26712C9300A57841 /* App */,
+				4EE468DC26712C9800A57841 /* Model */,
+				4EE468DD26712CAA00A57841 /* ViewModel */,
+				4EE468DE26712CB800A57841 /* View */,
 				4E1A9FFA2670F5C400C02F36 /* Info.plist */,
 				4E13A46F2670E68000B582C4 /* ShazamKit-Demo.entitlements */,
-				4E13A45F2670E39100B582C4 /* ShazamKit_DemoApp.swift */,
-				4E13A4612670E39100B582C4 /* ContentView.swift */,
 				4E13A4632670E39500B582C4 /* Assets.xcassets */,
 				4E13A4652670E39500B582C4 /* Preview Content */,
-				4E13A46D2670E3A800B582C4 /* ShazamController.swift */,
-				4E4C400826711AA9002D5B20 /* ShazamRow.swift */,
-				4E4C400A26711B86002D5B20 /* Media.swift */,
 			);
 			path = "ShazamKit-Demo";
 			sourceTree = "<group>";
@@ -90,6 +91,40 @@
 				4E13A4712670E68000B582C4 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EE468DB26712C9300A57841 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4E13A45F2670E39100B582C4 /* ShazamKit_DemoApp.swift */,
+				4E13A4612670E39100B582C4 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4EE468DC26712C9800A57841 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E4C400A26711B86002D5B20 /* Media.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EE468DD26712CAA00A57841 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4E13A46D2670E3A800B582C4 /* ShazamController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4EE468DE26712CB800A57841 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E4C400826711AA9002D5B20 /* ShazamRow.swift */,
+				4EE468DF26712CD000A57841 /* ShazamDetail.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE468E026712CD000A57841 /* ShazamDetail.swift in Sources */,
 				4E13A46E2670E3A800B582C4 /* ShazamController.swift in Sources */,
 				4E13A4622670E39100B582C4 /* ContentView.swift in Sources */,
 				4E4C400926711AA9002D5B20 /* ShazamRow.swift in Sources */,

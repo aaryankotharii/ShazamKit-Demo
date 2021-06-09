@@ -1,5 +1,3 @@
  <img src ="Assets/banner.png"  />  
- 
- # Screenshots
- 
+ <br>
  <img src ="Assets/ss.png"  />  

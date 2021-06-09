@@ -20,10 +20,10 @@ struct ShazamRow: View {
                     .frame(width: 100, height: 100)
             }
             VStack(alignment:.leading,spacing:10) {
-                Text(media.name ?? "No Title")
+                Text(media.name)
                     .font(.title3)
                     .bold()
-                Text(media.artist ?? "")
+                Text(media.artist)
                     .font(.callout)
             }
             .padding()

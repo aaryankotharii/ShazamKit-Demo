@@ -25,7 +25,7 @@ struct ContentView: View {
                                 Label("Delete", systemImage: "trash")
                             }
                             Button { } label: {
-                                Label("Flag", systemImage: "flag")
+                                Label("Star", systemImage: "star")
                             }
                             .tint(.orange)
                         }

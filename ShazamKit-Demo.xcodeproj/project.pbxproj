@@ -98,6 +98,7 @@
 			children = (
 				4E13A45F2670E39100B582C4 /* ShazamKit_DemoApp.swift */,
 				4E13A4612670E39100B582C4 /* ContentView.swift */,
+				4EE468DF26712CD000A57841 /* ShazamDetail.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -122,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				4E4C400826711AA9002D5B20 /* ShazamRow.swift */,
-				4EE468DF26712CD000A57841 /* ShazamDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -13,6 +13,8 @@
 		4E13A4672670E39500B582C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E13A4662670E39500B582C4 /* Preview Assets.xcassets */; };
 		4E13A46E2670E3A800B582C4 /* ShazamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E13A46D2670E3A800B582C4 /* ShazamController.swift */; };
 		4E13A4722670E68000B582C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E13A4712670E68000B582C4 /* AudioToolbox.framework */; };
+		4E4C400926711AA9002D5B20 /* ShazamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C400826711AA9002D5B20 /* ShazamRow.swift */; };
+		4E4C400B26711B86002D5B20 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C400A26711B86002D5B20 /* Media.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		4E13A46D2670E3A800B582C4 /* ShazamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamController.swift; sourceTree = "<group>"; };
 		4E13A46F2670E68000B582C4 /* ShazamKit-Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShazamKit-Demo.entitlements"; sourceTree = "<group>"; };
 		4E13A4712670E68000B582C4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4E1A9FFA2670F5C400C02F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4E4C400826711AA9002D5B20 /* ShazamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamRow.swift; sourceTree = "<group>"; };
+		4E4C400A26711B86002D5B20 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +63,15 @@
 		4E13A45E2670E39100B582C4 /* ShazamKit-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4E1A9FFA2670F5C400C02F36 /* Info.plist */,
 				4E13A46F2670E68000B582C4 /* ShazamKit-Demo.entitlements */,
 				4E13A45F2670E39100B582C4 /* ShazamKit_DemoApp.swift */,
 				4E13A4612670E39100B582C4 /* ContentView.swift */,
 				4E13A4632670E39500B582C4 /* Assets.xcassets */,
 				4E13A4652670E39500B582C4 /* Preview Content */,
 				4E13A46D2670E3A800B582C4 /* ShazamController.swift */,
+				4E4C400826711AA9002D5B20 /* ShazamRow.swift */,
+				4E4C400A26711B86002D5B20 /* Media.swift */,
 			);
 			path = "ShazamKit-Demo";
 			sourceTree = "<group>";
@@ -156,7 +164,9 @@
 			files = (
 				4E13A46E2670E3A800B582C4 /* ShazamController.swift in Sources */,
 				4E13A4622670E39100B582C4 /* ContentView.swift in Sources */,
+				4E4C400926711AA9002D5B20 /* ShazamRow.swift in Sources */,
 				4E13A4602670E39100B582C4 /* ShazamKit_DemoApp.swift in Sources */,
+				4E4C400B26711B86002D5B20 /* Media.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +301,10 @@
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShazamKit-Demo/Info.plist";
+				INFOPLIST_KEY_CFBundleExecutable = "ShazamKit-Demo";
+				INFOPLIST_KEY_CFBundleName = "ShazamKit-Demo";
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -322,6 +336,10 @@
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShazamKit-Demo/Info.plist";
+				INFOPLIST_KEY_CFBundleExecutable = "ShazamKit-Demo";
+				INFOPLIST_KEY_CFBundleName = "ShazamKit-Demo";
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

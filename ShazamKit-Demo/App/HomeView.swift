@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     @ObservedObject var session: ShazamController
 
     var body: some View {
         NavigationView {
+            ZStack {
             VStack {
                 List {
                 ForEach(session.searchResults,id:\.title) { media in
@@ -31,16 +32,24 @@ struct ContentView: View {
                         }
                 }
             }
-                Button("Listen",action: session.listen)
+            }
+                VStack {
+                    Spacer()
+                    Button(action: session.listen) {
+                        ShazamButton(title: $session.buttonTitle, state: $session.state)
+                    }
+                        .offset(x: 0, y: -50)
+                }
             }
             .navigationBarTitle(Text("ShazamKit"))
             .searchable(text: $session.searchText)
         }
+        .accentColor(.white)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(session: ShazamController())
+        HomeView(session: ShazamController())
     }
 }

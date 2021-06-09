@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E13A4602670E39100B582C4 /* ShazamKit_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E13A45F2670E39100B582C4 /* ShazamKit_DemoApp.swift */; };
-		4E13A4622670E39100B582C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E13A4612670E39100B582C4 /* ContentView.swift */; };
+		4E13A4622670E39100B582C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E13A4612670E39100B582C4 /* HomeView.swift */; };
 		4E13A4642670E39500B582C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E13A4632670E39500B582C4 /* Assets.xcassets */; };
 		4E13A4672670E39500B582C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E13A4662670E39500B582C4 /* Preview Assets.xcassets */; };
 		4E13A46E2670E3A800B582C4 /* ShazamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E13A46D2670E3A800B582C4 /* ShazamController.swift */; };
@@ -16,12 +16,14 @@
 		4E4C400926711AA9002D5B20 /* ShazamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C400826711AA9002D5B20 /* ShazamRow.swift */; };
 		4E4C400B26711B86002D5B20 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C400A26711B86002D5B20 /* Media.swift */; };
 		4EE468E026712CD000A57841 /* ShazamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE468DF26712CD000A57841 /* ShazamDetail.swift */; };
+		4EE468E226713B8E00A57841 /* ShazamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE468E126713B8E00A57841 /* ShazamButton.swift */; };
+		4EE468E426713D5900A57841 /* ShazamState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE468E326713D5900A57841 /* ShazamState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E13A45C2670E39100B582C4 /* ShazamKit-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShazamKit-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E13A45F2670E39100B582C4 /* ShazamKit_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamKit_DemoApp.swift; sourceTree = "<group>"; };
-		4E13A4612670E39100B582C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4E13A4612670E39100B582C4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4E13A4632670E39500B582C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E13A4662670E39500B582C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E13A46D2670E3A800B582C4 /* ShazamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamController.swift; sourceTree = "<group>"; };
@@ -31,6 +33,8 @@
 		4E4C400826711AA9002D5B20 /* ShazamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamRow.swift; sourceTree = "<group>"; };
 		4E4C400A26711B86002D5B20 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		4EE468DF26712CD000A57841 /* ShazamDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamDetail.swift; sourceTree = "<group>"; };
+		4EE468E126713B8E00A57841 /* ShazamButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamButton.swift; sourceTree = "<group>"; };
+		4EE468E326713D5900A57841 /* ShazamState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +74,6 @@
 				4EE468DD26712CAA00A57841 /* ViewModel */,
 				4EE468DE26712CB800A57841 /* View */,
 				4E1A9FFA2670F5C400C02F36 /* Info.plist */,
-				4E13A46F2670E68000B582C4 /* ShazamKit-Demo.entitlements */,
 				4E13A4632670E39500B582C4 /* Assets.xcassets */,
 				4E13A4652670E39500B582C4 /* Preview Content */,
 			);
@@ -97,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				4E13A45F2670E39100B582C4 /* ShazamKit_DemoApp.swift */,
-				4E13A4612670E39100B582C4 /* ContentView.swift */,
+				4E13A4612670E39100B582C4 /* HomeView.swift */,
+				4E13A46F2670E68000B582C4 /* ShazamKit-Demo.entitlements */,
 				4EE468DF26712CD000A57841 /* ShazamDetail.swift */,
 			);
 			path = App;
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				4E4C400A26711B86002D5B20 /* Media.swift */,
+				4EE468E326713D5900A57841 /* ShazamState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				4E4C400826711AA9002D5B20 /* ShazamRow.swift */,
+				4EE468E126713B8E00A57841 /* ShazamButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,11 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EE468E026712CD000A57841 /* ShazamDetail.swift in Sources */,
+				4EE468E426713D5900A57841 /* ShazamState.swift in Sources */,
 				4E13A46E2670E3A800B582C4 /* ShazamController.swift in Sources */,
-				4E13A4622670E39100B582C4 /* ContentView.swift in Sources */,
+				4E13A4622670E39100B582C4 /* HomeView.swift in Sources */,
 				4E4C400926711AA9002D5B20 /* ShazamRow.swift in Sources */,
 				4E13A4602670E39100B582C4 /* ShazamKit_DemoApp.swift in Sources */,
 				4E4C400B26711B86002D5B20 /* Media.swift in Sources */,
+				4EE468E226713B8E00A57841 /* ShazamButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

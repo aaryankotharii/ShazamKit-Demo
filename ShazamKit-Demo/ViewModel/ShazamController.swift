@@ -12,7 +12,7 @@ class ShazamController: NSObject, ObservableObject {
     
     @Published var media : [SHMatchedMediaItem] = SHMatchedMediaItem.data
     @Published var buttonTitle = "Listen"
-    
+    @Published var state: ShazamState = .idle
     private let audioEngine = AVAudioEngine()
     private let signatureGenerator = SHSignatureGenerator()
     private let session = SHSession()

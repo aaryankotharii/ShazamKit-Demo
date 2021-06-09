@@ -31,11 +31,11 @@ struct ShazamDetail: View {
             }
             
             Text(media.name)
-                .font(.system(size: 30, weight: .black))
                 .foregroundColor(.white)
+                .font(.system(size: 30, weight: .black))
             Text(media.artist)
+                .foregroundColor(.white)
                 .bold()
-                .foregroundColor(.secondary)
             Link(destination: media.mediaUrl) {
                Text(" View in Apple Music")
                     .foregroundColor(.white)

@@ -5,3 +5,5 @@ ShazamKit lets you enrich your app experience by letting users find out a songâ€
  </b> </p>
   <hr>
  <img src ="Assets/ss.png"  />  
+
+ <p align="center"><b> Aaryan Kothari Â© </b></p>
